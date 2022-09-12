@@ -48,6 +48,6 @@ while True:
                 sg.popup(rf"端口号 '{selected_port}' 不是数字")
                 continue
             port = int(selected_port)
+            window.close()
             sg.popup(rf"请在局域网访问 'http://{get_ip()}:{port}'")
             start_server(port, selected_folder)
-
