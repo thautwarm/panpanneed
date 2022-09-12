@@ -3,7 +3,7 @@ from wisepy2 import wise
 from panpanneed import start_server
 
 
-def CLI(*, rootdir: str=".", port: int = 6752):
+def CLI(*, rootdir: str = ".", port: int = 6752):
     start_server(port, rootdir)
 
 

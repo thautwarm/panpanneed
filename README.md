@@ -15,6 +15,13 @@ start_server(port=2992)
 python -m panpanneed --port=2992
 ```
 
+从GUI启动：
+
+```bash
+python gui.py
+```
+
+![start-from-gui](./start-from-gui.PNG)
 
 ## Features
 
