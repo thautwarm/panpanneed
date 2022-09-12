@@ -47,7 +47,7 @@ class CloudService(App):
 
         if port is not None:
             port = int(port)
-        self.app.run(port=port)
+        self.app.run(host='0.0.0.0', port=port)
 
     def _create_stream(self, fso: FsObject):
         """get a stream from a relative path"""
