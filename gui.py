@@ -30,7 +30,7 @@ layout = [
     ]
 ]
 
-window = sg.Window("CanCanNeed启动器", layout)
+window = sg.Window("PanPanNeed启动器", layout)
 
 while True:
     signal = window.read()
