@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "panpanneed"
+version = "0.1.0"
+description = "Your Custom Cloud Drive in One Line"
+authors = ["thautwarm <twshere@outlook.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fs = "^2.4.16"
+pretty-doc = "^0.3"
+Flask = "^2.2.2"
+typing-extensions = "^4.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
