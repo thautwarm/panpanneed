@@ -24,4 +24,4 @@ class Directory:
 if typing.TYPE_CHECKING:
     FsObject = File | Directory
 else:
-    FsObject = (File, Directory)
+    FsObject = object
