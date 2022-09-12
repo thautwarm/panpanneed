@@ -172,4 +172,4 @@ def start_server(port: str | int | None = None, rootdir="."):
 
     name = sys._getframe(1).f_globals["__name__"]
     cloud_service = CloudService(name, rootdir)
-    cloud_service.serve()
+    cloud_service.serve(port=port)
