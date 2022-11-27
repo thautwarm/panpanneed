@@ -2,8 +2,8 @@ import pathlib
 import PySimpleGUI as sg
 from pathlib import Path
 from panpanneed import start_server
-from multiprocessing import Process
 from threading import Thread
+from gui_icon import B64_IMAGE
 
 def get_ip():
     import socket
@@ -32,7 +32,7 @@ layout = [
     ]
 ]
 
-window = sg.Window("PanPanNeed启动器", layout)
+window = sg.Window("PanPanNeed启动器", layout, icon=B64_IMAGE, titlebar_icon=B64_IMAGE)
 
 while True:
     signal = window.read()
@@ -59,5 +59,6 @@ while True:
                     [sg.Text(rf"请在局域网内使用其他设备访问 http://{get_ip()}:{port}")],
                     [sg.Button("结束文件传输")]
                 ],
+                icon=B64_IMAGE, titlebar_icon=B64_IMAGE
             )
             window2.read()
