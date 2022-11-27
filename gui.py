@@ -2,6 +2,8 @@ import pathlib
 import PySimpleGUI as sg
 from pathlib import Path
 from panpanneed import start_server
+from multiprocessing import Process
+from threading import Thread
 
 def get_ip():
     import socket
@@ -49,5 +51,13 @@ while True:
                 continue
             port = int(selected_port)
             window.close()
-            sg.popup(rf"请在局域网访问 'http://{get_ip()}:{port}'")
-            start_server(port, selected_folder)
+            game_thread = Thread(target=start_server, args = (port, selected_folder), daemon=True)
+            game_thread.start()
+            window2 = sg.Window(
+                "盘盘你的",
+                [
+                    [sg.Text(rf"请在局域网内使用其他设备访问 http://{get_ip()}:{port}")],
+                    [sg.Button("结束文件传输")]
+                ],
+            )
+            window2.read()

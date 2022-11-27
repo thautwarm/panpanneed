@@ -144,13 +144,15 @@ class CloudService(App):
         pso = self.rootdirpath.joinpath(*routes)
         if pso.is_file():
             return flask.Response(
-                flask.stream_with_context(self._create_stream(File("/".join(routes))))
+                flask.stream_with_context(self._create_stream(File("/".join(routes)))),
+                mimetype='text/plain'
             )
         if pso.is_dir():
             return flask.Response(
                 flask.stream_with_context(
-                    self._create_stream(Directory("/".join(routes)))
-                )
+                    self._create_stream(Directory("/".join(routes))),
+                ),
+                mimetype='application/zip'
             )
         raise ValueError(f"{pso} is not a valid filesystem representation")
 
