@@ -3,7 +3,10 @@ import PySimpleGUI as sg
 from pathlib import Path
 from panpanneed import start_server
 from threading import Thread
-from gui_icon import B64_IMAGE
+try:
+    from gui_icon import B64_IMAGE
+except ImportError:
+    B64_IMAGE = None
 
 def get_ip():
     import socket
