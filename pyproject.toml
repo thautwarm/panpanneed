@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "panpanneed"
-version = "0.2.0"
+version = "0.2.1"
 description = "Your Custom Cloud Drive in One Line"
 authors = ["thautwarm <twshere@outlook.com>"]
 license = "MIT"
