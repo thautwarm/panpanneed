@@ -13,3 +13,8 @@ with open("gui_icon.py", 'w', encoding='utf-8') as f:
     f.write('B64_IMAGE = ')
     f.write(repr(img_str))
     f.write('\n')
+
+def image_to_base64(im: PIL.Image.Image):
+    buffer = io.BytesIO()
+    img.save(buffer, format='PNG')
+    return base64.b64encode(buffer.getvalue())

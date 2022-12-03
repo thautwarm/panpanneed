@@ -24,7 +24,7 @@ import tempfile
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-BUFFER_SIZE = 1024
+BUFFER_SIZE = 10240
 
 
 class CloudService(App):
